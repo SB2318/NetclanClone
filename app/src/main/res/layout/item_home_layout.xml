@@ -1,186 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/rl2"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:rotationX="-360">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <FrameLayout
-        android:id="@+id/frameLayout"
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/rl2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true">
+        android:rotationX="-360">
 
-        <androidx.cardview.widget.CardView
+        <FrameLayout
+            android:id="@+id/frameLayout"
             android:layout_width="match_parent"
-            android:paddingLeft="33dp"
-            android:paddingRight="20dp"
-            android:layout_marginStart="59dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="4dp"
-            app:cardElevation="4dp"
-            app:cardCornerRadius="18dp"
-            android:layout_marginEnd="15dp"
-            android:layout_height="match_parent">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="10dp"
-            android:orientation="vertical">
-
-
-            <TextView
-                android:id="@+id/title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="53dp"
-                android:layout_marginTop="37dp"
-                android:text="Pathkind Labs"
-                android:textAlignment="viewEnd"
-                android:textStyle="bold"
-                android:textSize="17sp" />
-            <TextView
-                android:id="@+id/location"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="53dp"
-                android:layout_marginTop="2dp"
-                android:text="Raniganj, within 17.5 KM"
-                android:textAlignment="viewEnd"
-                android:textSize="15sp" />
-
-            <!--Horizontal progressBar -->
-            <ProgressBar
-                android:id="@+id/progressBar"
-                android:layout_width="150dp"
-                android:layout_height="wrap_content"
-                android:progressDrawable="@drawable/progressbar_bg"
-                android:layout_marginStart="53dp"
-                android:layout_marginTop="6dp"
-                style="?android:attr/progressBarStyleHorizontal"
-                android:max="100"
-                android:progress="50"
-                 />
-
-            <!--Icons -->
-
-            <LinearLayout
-                android:id="@+id/linearLayout2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="10dp"
-                android:gravity="center_horizontal"
-                >
-
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginHorizontal="6dp"
-                    android:src="@drawable/call_icon"/>
-
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_marginHorizontal="6dp"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/contact_icon"/>
-
-                <ImageView
-                    android:layout_width="33dp"
-                    android:layout_height="33dp"
-                    android:layout_marginHorizontal="6dp"
-                    android:src="@drawable/location_icon_circle_blue"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/linearLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="9dp"
-                >
-                <TextView
-                    android:id="@+id/coffee"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginStart="10dp"
-                    android:text="Coffee | "
-                    android:textAlignment="viewEnd"
-                    android:textStyle="bold"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:id="@+id/business"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="3dp"
-                    android:layout_marginTop="16dp"
-                    android:text="Business | "
-                    android:textAlignment="viewEnd"
-                    android:textStyle="bold"
-                    android:textSize="14sp" />
-
-                <TextView
-                    android:id="@+id/friendship"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="3dp"
-                    android:layout_marginTop="16dp"
-                    android:text="Friendship  "
-                    android:textAlignment="viewEnd"
-                    android:textStyle="bold"
-                    android:textSize="14sp" />
-
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/aboutText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="2dp"
-                android:text="@string/home_message"
-                android:textSize="14sp" />
-
-        </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.cardview.widget.CardView
-            android:layout_width="85dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="14dp"
-            android:layout_marginTop="56dp"
-            app:cardCornerRadius="12dp"
-            app:cardBackgroundColor="#5FB4F7"
-            app:cardElevation="18dp">
+            android:layout_alignParentStart="true">
 
-            <TextView
-                android:id="@+id/titleText"
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:paddingLeft="33dp"
+                android:paddingRight="20dp"
+                android:layout_marginStart="59dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="4dp"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="18dp"
+                android:layout_marginEnd="15dp"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="53dp"
+                        android:layout_marginTop="37dp"
+                        android:text="Pathkind Labs"
+                        android:textAlignment="viewEnd"
+                        android:textStyle="bold"
+                        android:textSize="17sp" />
+
+
+                    <TextView
+                        android:id="@+id/location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="53dp"
+                        android:layout_marginTop="2dp"
+                        android:text="Raniganj, within 17.5 KM"
+                        android:textAlignment="viewEnd"
+                        android:textSize="15sp" />
+
+                    <!--Horizontal progressBar -->
+                    <ProgressBar
+                        android:id="@+id/progressBar"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:progressDrawable="@drawable/progressbar_bg"
+                        android:layout_marginStart="53dp"
+                        android:layout_marginTop="6dp"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:max="100"
+                        android:progress="50" />
+
+                    <!--Icons -->
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone"
+                        android:gravity="center_horizontal">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginHorizontal="6dp"
+                            android:src="@drawable/call_icon" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginHorizontal="6dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/contact_icon" />
+
+                        <ImageView
+                            android:layout_width="33dp"
+                            android:layout_height="33dp"
+                            android:layout_marginHorizontal="6dp"
+                            android:src="@drawable/location_icon_circle_blue" />
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/tagRecycler"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="9dp"
+                        android:layout_marginStart="10dp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp" />
+
+                    <TextView
+                        android:id="@+id/aboutText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="2dp"
+                        android:text="@string/home_message"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/statusText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="2dp"
+                        android:textStyle="bold"
+                        android:text="Available"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
                 android:layout_width="85dp"
-                android:layout_height="90dp"
-                android:elevation="2dp"
-                android:text="PL"
-                android:gravity="center"
-                android:textSize="28sp"
-                android:textStyle="bold"
-                android:src="@drawable/nature_images" />
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="56dp"
+                app:cardCornerRadius="12dp"
+                app:cardBackgroundColor="#5FB4F7"
+                app:cardElevation="18dp">
 
-        </androidx.cardview.widget.CardView>
+                <TextView
+                    android:id="@+id/titleText"
+                    android:layout_width="85dp"
+                    android:layout_height="90dp"
+                    android:elevation="2dp"
+                    android:text="PL"
+                    android:gravity="center"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/profileImage"
+                    android:layout_width="85dp"
+                    android:layout_height="90dp"
+                    android:elevation="2dp"
+                    android:visibility="gone"
+                    android:src="@drawable/nature_images"
+                    android:scaleType="fitXY" />
+
+            </androidx.cardview.widget.CardView>
 
 
-    </FrameLayout>
+        </FrameLayout>
 
 
-
-
-
-</RelativeLayout>
+    </RelativeLayout>
+</layout>
