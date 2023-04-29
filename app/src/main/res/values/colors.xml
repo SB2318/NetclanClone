@@ -4,7 +4,8 @@
     <color name="white">#FFFFFFFF</color>
     <color name="colorGray">#c1c1c1</color>
     <color name="colorBlue">#5FB4F7</color>
-    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimary">#4F0EC4</color>
     <color name="colorAccent">#FF4081</color>
     <color name="color_navy_blue">#287cf6</color>
+    <color name="colorSecondary">#008081</color>
 </resources>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_margin="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Select Your Availability"
+            android:textSize="14sp"
+            android:textColor="@color/colorSecondary"
+            android:textStyle="bold"/>
+        <Spinner
+            android:id="@+id/serving_as_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="16dp"
+            android:autofillHints="Serving As"
+            android:background="@drawable/custom_dropdown"
+            android:spinnerMode="dropdown"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Add Your Status"
+            android:textSize="14sp"
+            android:textColor="@color/colorSecondary"
+            android:textStyle="bold"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/status_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/home_message"
+                android:textSize="14sp"
+                android:minHeight="90dp"
+                android:padding="10dp"
+                android:gravity="top"
+                android:background="@drawable/custom_text_bg"
+                android:textColor="@color/black"
+                android:isScrollContainer="true"
+                />
+
+            <TextView
+                android:id="@+id/status_word_counter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="47/250"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_below="@id/status_container"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Select Hyper local Distance"
+            android:textSize="14sp"
+            android:textColor="@color/colorSecondary"
+            android:textStyle="bold"/>
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      >
+
+      <com.google.android.material.slider.Slider
+          android:id="@+id/distanceSlider"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:valueFrom="1"
+          android:valueTo="100"
+          android:layout_marginTop="20dp"
+          app:tickColor="@color/colorSecondary"
+          app:trackColorActive="@color/colorSecondary"
+          app:trackColorInactive="@color/colorGray"
+          app:thumbColor="@color/colorSecondary"
+          app:trackHeight="2dp"
+          style="@style/SliderStyle"
+          />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="1 KM"
+          android:textSize="14sp"
+          android:textColor="@color/black"
+          android:layout_below="@id/distanceSlider"
+          android:layout_alignParentStart="true"/>
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="100 KM"
+          android:textSize="14sp"
+          android:textColor="@color/black"
+          android:layout_below="@id/distanceSlider"
+          android:layout_alignParentEnd="true"/>
+
+
+  </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Select Purpose"
+            android:textSize="14sp"
+            android:textColor="@color/colorSecondary"
+            android:textStyle="bold"/>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/refineTagRecycler"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="3"
+            android:layout_marginTop="8dp"
+            tools:listitem="@layout/item_refine_tag_layout"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:id="@+id/save_explore_btn"
+            android:text= "Save &amp; Explore"
+            android:textColor="@color/white"
+            android:background="@drawable/refine_android_tag_select_bg"
+            android:padding="10dp"/>
+
+    </LinearLayout>
+
+</layout>
