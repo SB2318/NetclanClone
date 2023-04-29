@@ -24,7 +24,7 @@
                 android:layout_width="match_parent"
                 android:paddingLeft="33dp"
                 android:paddingRight="20dp"
-                android:layout_marginStart="59dp"
+                android:layout_marginStart="39dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginBottom="4dp"
                 app:cardElevation="4dp"
@@ -32,29 +32,30 @@
                 android:layout_marginEnd="15dp"
                 android:layout_height="match_parent">
 
-                <LinearLayout
+                <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:padding="10dp"
-                    android:orientation="vertical">
-
+                    android:padding="10dp">
 
                     <TextView
                         android:id="@+id/title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
                         android:layout_marginStart="53dp"
                         android:layout_marginTop="37dp"
                         android:text="Pathkind Labs"
                         android:textAlignment="viewEnd"
-                        android:textStyle="bold"
-                        android:textSize="17sp" />
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
 
 
                     <TextView
                         android:id="@+id/location"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_below="@id/title"
                         android:layout_marginStart="53dp"
                         android:layout_marginTop="2dp"
                         android:text="Raniganj, within 17.5 KM"
@@ -64,14 +65,15 @@
                     <!--Horizontal progressBar -->
                     <ProgressBar
                         android:id="@+id/progressBar"
+                        style="?android:attr/progressBarStyleHorizontal"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content"
-                        android:progressDrawable="@drawable/progressbar_bg"
+                        android:layout_below="@id/location"
                         android:layout_marginStart="53dp"
                         android:layout_marginTop="6dp"
-                        style="?android:attr/progressBarStyleHorizontal"
                         android:max="100"
-                        android:progress="50" />
+                        android:progress="50"
+                        android:progressDrawable="@drawable/progressbar_bg" />
 
                     <!--Icons -->
 
@@ -79,10 +81,11 @@
                         android:id="@+id/linearLayout2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
+                        android:layout_below="@id/progressBar"
                         android:layout_marginTop="10dp"
-                        android:visibility="gone"
-                        android:gravity="center_horizontal">
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
 
                         <ImageView
                             android:layout_width="30dp"
@@ -109,16 +112,18 @@
                         android:id="@+id/tagRecycler"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="9dp"
+                        android:layout_below="@id/linearLayout2"
                         android:layout_marginStart="10dp"
-                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="9dp"
                         android:orientation="horizontal"
-                        android:layout_marginTop="10dp" />
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
                     <TextView
                         android:id="@+id/aboutText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_below="@id/tagRecycler"
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="2dp"
                         android:text="@string/home_message"
@@ -128,20 +133,34 @@
                         android:id="@+id/statusText"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_below="@id/aboutText"
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="2dp"
-                        android:textStyle="bold"
                         android:text="Available"
                         android:textSize="14sp" />
 
-                </LinearLayout>
+                    <TextView
+                        android:id="@+id/invite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="53dp"
+                        android:layout_marginTop="2dp"
+                        android:drawableLeft="@drawable/baseline_add_24"
+                        android:text="INVITE"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/color_navy_blue"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
 
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="85dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="14dp"
+                android:layout_marginStart="4dp"
                 android:layout_marginTop="56dp"
                 app:cardCornerRadius="12dp"
                 app:cardBackgroundColor="#5FB4F7"
@@ -170,6 +189,7 @@
 
 
         </FrameLayout>
+
 
 
     </RelativeLayout>

@@ -12,11 +12,12 @@ import com.sb2318.netclanclone.databinding.ItemHomeLayoutBinding
 import com.sb2318.netclanclone.services.DataModel
 import com.sb2318.netclanclone.services.processDistance
 
-class ProfessionalAdapter(val dataLists:List<DataModel>,val context:Context)
-    : RecyclerView.Adapter<ProfessionalAdapter.ProfessionalViewHolder>(){
+class IndividualAdapter(private val dataLists:List<DataModel>,private val context:Context)
+    : RecyclerView.Adapter<IndividualAdapter.IndividualViewHolder>(){
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProfessionalViewHolder {
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): IndividualViewHolder {
         val binding= DataBindingUtil.inflate<ItemHomeLayoutBinding>(
             LayoutInflater.from(parent.context),
             R.layout.item_home_layout,
@@ -24,27 +25,26 @@ class ProfessionalAdapter(val dataLists:List<DataModel>,val context:Context)
             false
         )
 
-        return ProfessionalViewHolder(binding)
+        return IndividualViewHolder(binding)
     }
 
     override fun getItemCount(): Int = dataLists.size
 
-    override fun onBindViewHolder(holder: ProfessionalViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: IndividualViewHolder, position: Int) {
         holder.bind(dataLists[position])
     }
 
-    inner class ProfessionalViewHolder(val binding:ItemHomeLayoutBinding)
+    inner class IndividualViewHolder(val binding:ItemHomeLayoutBinding)
         :RecyclerView.ViewHolder(binding.root){
-
-
         fun bind(dataModel: DataModel) {
-           binding.profileImage.visibility= View.GONE
-           binding.titleText.visibility = View.VISIBLE
-           binding.linearLayout2.visibility = View.GONE
-           binding.tagRecycler.visibility = View.VISIBLE
+
+            binding.profileImage.visibility= View.GONE
+            binding.titleText.visibility = View.VISIBLE
+            binding.linearLayout2.visibility = View.GONE
+            binding.tagRecycler.visibility = View.VISIBLE
 
             val titleText= "${dataModel.title[0]}${dataModel.title.substring(
-                  dataModel.title.indexOf(" ")+1,
+                dataModel.title.indexOf(" ")+1,
                 dataModel.title.indexOf(" ")+2
             )}"
 
@@ -60,24 +60,13 @@ class ProfessionalAdapter(val dataLists:List<DataModel>,val context:Context)
             val distanceMsg= "${dataModel.location},within $distanceInKm KM"
             binding.location.text= distanceMsg
             binding.statusText.text= dataModel.status
+            binding.aboutText.text= context.getString(R.string.home_message)
 
-            binding.aboutText.text = context.getString(R.string.professional_message)
-            val companyName= if(dataModel.companyName.isEmpty())
-                                "NA"
-                             else
-                               dataModel.companyName
-
-            val exp =  if(dataModel.experiencedYear==1)
-                           "1 year of experience"
-                       else
-                           "${dataModel.experiencedYear}s of experience"
-            val adapter= TagAdapter(listOf(
-                 companyName,
-                exp
-            ))
+            val adapter= TagAdapter(dataModel.tags)
 
             binding.tagRecycler.adapter= adapter
-            binding.tagRecycler.layoutManager = LinearLayoutManager(context,LinearLayoutManager.HORIZONTAL,false)
+            binding.tagRecycler.layoutManager = LinearLayoutManager(context,
+                LinearLayoutManager.HORIZONTAL,false)
             binding.tagRecycler.setHasFixedSize(true)
         }
 

@@ -1,4 +1,4 @@
-package com.sb2318.netclanclone.view
+package com.sb2318.netclanclone.view.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -40,6 +40,7 @@ class MerchantAdapter(val dataLists:List<DataModel>,val context:Context):Recycle
           binding.tagRecycler.visibility = View.GONE
           binding.linearLayout2.visibility= View.VISIBLE
           binding.profileImage.visibility= View.VISIBLE
+          binding.invite.visibility = View.GONE
           binding.aboutText.text=  context.getString(R.string.merchant_message)
           binding.progressBar.progress= dataModel.progress
 

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="10dp"
+            android:weightSum="2">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="34dp"
+                android:layout_weight="1.5"
+                android:background="@drawable/search_bg"
+                android:id="@+id/search_bar"
+                android:hint="Search"
+                android:drawableLeft="@drawable/baseline_search_24"
+                android:drawablePadding="14dp" />
+
+            <ImageView
+                android:id="@+id/filter_icon"
+                android:layout_width="0dp"
+                android:layout_height="34dp"
+                android:layout_weight="0.5"
+                android:src="@drawable/filter"
+                android:layout_gravity="end"
+                android:layout_marginTop="10dp" />
+
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:id="@+id/container_recycler"
+            tools:listitem="@layout/item_home_layout" />
+
+    </LinearLayout>
+</layout>
