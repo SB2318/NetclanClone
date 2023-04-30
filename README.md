@@ -9,8 +9,8 @@ Tasks :
 
 Tasks Left:
 
-1. Navigation SetUp with Bottom Nav
-2. ActivityMainLayout building
+✅1. Navigation SetUp with Bottom Nav
+✅2. ActivityMainLayout building
 3. TabLayout+ ViewPager Setting
 4. From Save Exlpore going to Explore
 5. Color Combination

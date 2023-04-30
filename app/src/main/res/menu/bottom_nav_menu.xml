@@ -1,5 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/refineFragment"
+        android:icon="@drawable/baseline_refine_24"
+        android:title="Refine"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/exploreFragment"
+        android:icon="@drawable/baseline_explore_24"
+        android:title="Explore"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/networkFragment"
+        android:icon="@drawable/baseline_groups_24"
+        android:title="Network"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/chatFragment"
+        android:icon="@drawable/baseline_chat_24"
+        android:title="Chat"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/contactFragment"
+        android:icon="@drawable/baseline_contacts_24"
+        android:title="Contact"
+        app:showAsAction="always"/>
+
 
 </menu>

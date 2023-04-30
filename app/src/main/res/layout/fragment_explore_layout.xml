@@ -10,7 +10,6 @@
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:gravity="center_horizontal"
-        android:padding="10dp"
         android:layout_height="match_parent">
 
 
@@ -25,7 +24,7 @@
             <EditText
                 android:layout_width="0dp"
                 android:layout_height="34dp"
-                android:layout_weight="1.5"
+                android:layout_weight="1.8"
                 android:background="@drawable/search_bg"
                 android:id="@+id/search_bar"
                 android:hint="Search"
@@ -36,7 +35,7 @@
                 android:id="@+id/filter_icon"
                 android:layout_width="0dp"
                 android:layout_height="34dp"
-                android:layout_weight="0.5"
+                android:layout_weight="0.2"
                 android:src="@drawable/filter"
                 android:layout_gravity="end"
                 android:layout_marginTop="10dp" />
