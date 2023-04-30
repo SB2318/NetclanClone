@@ -17,7 +17,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
+            android:padding="8dp"
             android:layout_marginHorizontal="10dp"
             android:weightSum="2">
 
@@ -27,6 +28,7 @@
                 android:layout_weight="1.8"
                 android:background="@drawable/search_bg"
                 android:id="@+id/search_bar"
+                android:layout_marginHorizontal="5dp"
                 android:hint="Search"
                 android:drawableLeft="@drawable/baseline_search_24"
                 android:drawablePadding="14dp" />
@@ -43,12 +45,40 @@
 
         </LinearLayout>
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:id="@+id/container_recycler"
-            tools:listitem="@layout/item_home_layout" />
+  <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="4dp"
+          android:id="@+id/container_recycler"
+          tools:listitem="@layout/item_home_layout" />
+
+      <include
+          android:id="@+id/no_data_layout"
+          android:layout_height="wrap_content"
+          android:layout_width="match_parent"
+          layout="@layout/no_item_layout"/>
+
+      <com.google.android.material.floatingactionbutton.FloatingActionButton
+          android:id="@+id/fab"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_margin="16dp"
+          android:layout_marginEnd="18dp"
+          android:layout_marginBottom="6dp"
+          android:src="@drawable/baseline_add_white"
+          android:backgroundTint="@color/colorSecondary"
+          android:layout_gravity="bottom|end"
+
+          />
+
+
+  </FrameLayout>
+
+
 
     </LinearLayout>
 </layout>

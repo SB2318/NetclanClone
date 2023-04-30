@@ -3,4 +3,6 @@
     <string name="home_message">Hi Community! I am open to new Connections &#128522;</string>
     <string name="merchant_message">Hi Community! We have a great deals for you. Check us out!!</string>
     <string name="professional_message">Hi Community! I am available at your Service.</string>
+
+    <string name="no_data_message">Your explore list is  <font color="#FFA500">EMPTY</font></string>
 </resources>

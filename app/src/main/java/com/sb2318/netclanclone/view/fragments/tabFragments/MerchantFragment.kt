@@ -1,4 +1,4 @@
-package com.sb2318.netclanclone.view.fragments
+package com.sb2318.netclanclone.view.fragments.tabFragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,14 +7,17 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.sb2318.netclanclone.R
 import com.sb2318.netclanclone.databinding.FragmentExploreLayoutBinding
+import com.sb2318.netclanclone.services.DataModel
 import com.sb2318.netclanclone.services.DataService
 import com.sb2318.netclanclone.view.adapters.MerchantAdapter
 
 class MerchantFragment: Fragment() {
 
     private lateinit var binding: FragmentExploreLayoutBinding
+    private lateinit var dataList:List<DataModel>
 
 
     override fun onCreateView(
@@ -31,7 +34,16 @@ class MerchantFragment: Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val adapter= MerchantAdapter(DataService.getCompaniesData(),requireContext())
+        dataList= DataService.getCompaniesData()
+        val adapter= MerchantAdapter(dataList,requireContext())
+
+        if(dataList.isEmpty()){
+            binding.containerRecycler.visibility= View.GONE
+            binding.noDataLayout.root.visibility= View.VISIBLE
+        }else{
+            binding.containerRecycler.visibility= View.VISIBLE
+            binding.noDataLayout.root.visibility= View.GONE
+        }
 
         val lm= LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL,false)
 
@@ -39,9 +51,24 @@ class MerchantFragment: Fragment() {
         binding.containerRecycler.layoutManager = lm
         binding.containerRecycler.setHasFixedSize(true)
 
-        binding.filterIcon.setOnClickListener {
+        binding.containerRecycler.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                super.onScrolled(recyclerView, dx, dy)
 
-            //navigate to merchant filter screen
-        }
+                if (dy > 10 && binding.fab.isShown) {
+                    binding.fab.hide()
+                }
+
+                if (dy < -10 && !binding.fab.isShown) {
+                    binding.fab.show()
+                }
+
+                if (!recyclerView.canScrollVertically(-1)) {
+                    binding.fab.show()
+                }
+            }
+        })
+
+
     }
 }

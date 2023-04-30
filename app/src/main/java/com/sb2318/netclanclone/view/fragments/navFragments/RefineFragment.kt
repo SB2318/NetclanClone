@@ -51,7 +51,7 @@ class RefineFragment: Fragment(), RefineTagAdapter.OnItemClick {
         super.onViewCreated(view, savedInstanceState)
 
         val servingList = listOf(
-            "Available|Hey Let Us Connect",
+            "Available | Hey Let Us Connect",
             "Away | Stay Discreet And Watch",
             "Busy | Do Not Disturb | Will Catch Up Later",
             "SOS | Emergency! Need Assistance! Help"
@@ -64,6 +64,7 @@ class RefineFragment: Fragment(), RefineTagAdapter.OnItemClick {
         )
 
         binding.servingAsSpinner.adapter= servingListAdapter
+
 
         binding.distanceSlider.setLabelFormatter { value -> value.toInt().toString() }
 

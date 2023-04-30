@@ -16,5 +16,5 @@ Tasks Left:
 
 ✅2. ActivityMainLayout building
 
-3. TabLayout+ ViewPager Setting
-5. Color Combination
+✅3. TabLayout+ ViewPager Setting
+✅5. Color Combination

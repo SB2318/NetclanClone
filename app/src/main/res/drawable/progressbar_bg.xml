@@ -8,7 +8,7 @@
          android:shape="rectangle">
 
          <corners android:radius="6dp"/>
-         <solid android:color="#d2edfc"/>
+         <solid android:color="@color/colorGray"/>
      </shape>
  </item>
 
@@ -19,7 +19,7 @@
             <shape android:shape="rectangle">
 
                 <corners android:radius="6dp"/>
-                <solid android:color="@color/color_navy_blue"/>
+                <solid android:color="@color/colorSecondary"/>
             </shape>
         </scale>
     </item>

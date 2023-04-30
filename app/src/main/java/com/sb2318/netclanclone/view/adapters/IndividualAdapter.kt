@@ -51,8 +51,8 @@ class IndividualAdapter(private val dataLists:List<DataModel>,private val contex
             binding.titleText.text = titleText
             binding.progressBar.progress= dataModel.progress
 
-            binding.title.text = if(dataModel.title.length>10)
-                "${dataModel.title.substring(0,10)}..."
+            binding.title.text = if(dataModel.title.length>20)
+                "${dataModel.title.substring(0,16)}..."
             else
                 dataModel.title
 

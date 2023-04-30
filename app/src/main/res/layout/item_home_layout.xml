@@ -47,7 +47,7 @@
                         android:layout_marginTop="37dp"
                         android:text="Pathkind Labs"
                         android:textAlignment="viewEnd"
-                        android:textSize="17sp"
+                        android:textSize="15sp"
                         android:textStyle="bold" />
 
 
@@ -60,7 +60,7 @@
                         android:layout_marginTop="2dp"
                         android:text="Raniganj, within 17.5 KM"
                         android:textAlignment="viewEnd"
-                        android:textSize="15sp" />
+                        android:textSize="14sp" />
 
                     <!--Horizontal progressBar -->
                     <ProgressBar
@@ -104,7 +104,7 @@
                             android:layout_width="33dp"
                             android:layout_height="33dp"
                             android:layout_marginHorizontal="6dp"
-                            android:src="@drawable/location_icon_circle_blue" />
+                            android:src="@drawable/baseline_location_on_24" />
 
                     </LinearLayout>
 
@@ -113,8 +113,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/linearLayout2"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="14dp"
                         android:layout_marginBottom="9dp"
                         android:orientation="horizontal"
                         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
@@ -137,6 +137,7 @@
                         android:layout_marginStart="10dp"
                         android:layout_marginTop="2dp"
                         android:text="Available"
+                        android:textStyle="bold"
                         android:textSize="14sp" />
 
                     <TextView
@@ -150,7 +151,7 @@
                         android:drawableLeft="@drawable/baseline_add_24"
                         android:text="INVITE"
                         android:textAlignment="viewEnd"
-                        android:textColor="@color/color_navy_blue"
+                        android:textColor="@color/colorSecondary"
                         android:textSize="15sp" />
 
                 </RelativeLayout>
@@ -163,7 +164,7 @@
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="56dp"
                 app:cardCornerRadius="12dp"
-                app:cardBackgroundColor="#5FB4F7"
+                app:cardBackgroundColor="@color/colorSecondary"
                 app:cardElevation="18dp">
 
                 <TextView
