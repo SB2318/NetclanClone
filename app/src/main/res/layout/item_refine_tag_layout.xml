@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="3dp"
         android:text="Coffee"
-        android:textStyle="bold"
+
         android:layout_marginTop="14dp"
         android:textColor="@color/white"
         android:padding="10dp"

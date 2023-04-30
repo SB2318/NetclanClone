@@ -7,7 +7,11 @@
     <fragment
         android:id="@+id/refineFragment"
         android:name="com.sb2318.netclanclone.view.fragments.navFragments.RefineFragment"
-        android:label="RefineFragment" />
+        android:label="RefineFragment" >
+        <action
+            android:id="@+id/action_refineFragment_to_exploreFragment"
+            app:destination="@id/exploreFragment" />
+    </fragment>
     <fragment
         android:id="@+id/exploreFragment"
         android:name="com.sb2318.netclanclone.view.fragments.navFragments.ExploreFragment"

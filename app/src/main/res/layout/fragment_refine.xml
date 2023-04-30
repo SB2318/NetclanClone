@@ -8,6 +8,9 @@
 
     </data>
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -29,7 +32,7 @@
             android:layout_height="50dp"
             android:layout_marginStart="2dp"
             android:layout_marginTop="6dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="2dp"
             android:autofillHints="Serving As"
             android:background="@drawable/custom_dropdown"
             android:spinnerMode="dropdown"
@@ -57,6 +60,7 @@
                 android:textSize="14sp"
                 android:minHeight="90dp"
                 android:padding="10dp"
+                android:maxLength="250"
                 android:gravity="top"
                 android:background="@drawable/custom_text_bg"
                 android:textColor="@color/black"
@@ -150,7 +154,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="16dp"
             android:id="@+id/save_explore_btn"
             android:text= "Save &amp; Explore"
             android:textColor="@color/white"
@@ -158,5 +162,7 @@
             android:padding="10dp"/>
 
     </LinearLayout>
+
+    </ScrollView>
 
 </layout>

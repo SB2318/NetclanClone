@@ -39,8 +39,17 @@ class RefineTagAdapter(val data:List<String>,val context:Context,val listener:On
 
         fun bind(tag: String) {
             binding.coffee.text= tag
-            binding.coffee.setTextColor(ContextCompat.getColor(context,R.color.black))
-            binding.coffee.setBackgroundResource(R.drawable.refine_tag_unselect_bg)
+
+            if(tag.equals("Coffee",true) || tag.equals("Business",true)
+                || tag.equals("Friendship",true)){
+                 choice= !choice
+                binding.coffee.setTextColor(ContextCompat.getColor(context,R.color.white))
+                binding.coffee.setBackgroundResource(R.drawable.refine_android_tag_select_bg)
+            }else {
+                binding.coffee.setTextColor(ContextCompat.getColor(context, R.color.black))
+                binding.coffee.setBackgroundResource(R.drawable.refine_tag_unselect_bg)
+            }
+
             binding.coffee.setOnClickListener {
 
                 choice=!choice
